@@ -31,7 +31,7 @@ fn app() -> Html {
 
             wasm_bindgen_futures::spawn_local(async move {
                 let response: Vec<i32> = Request::post(API_ENDPOINT)
-                    .body(format!("{{\"numbers\": \"{}\"}}", (*message_handle).replace("[", "").replace("]", "").replace(" ", "")))
+                    .body((*message_handle).replace("[", "").replace("]", "").replace(" ", ""))
                     .unwrap()
                     .send()
                     .await
