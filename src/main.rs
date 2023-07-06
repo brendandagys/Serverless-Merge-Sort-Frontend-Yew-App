@@ -1,40 +1,37 @@
 use gloo_net::http::Request;
-use serde::Deserialize;
 use web_sys::HtmlInputElement;
 use yew::prelude::*;
 
-#[derive(Deserialize)]
-struct ResponseBody {
-    message: String,
-}
+const API_ENDPOINT: &str = "http://localhost:3000";
 
 #[function_component(App)]
 fn app() -> Html {
     let input_node_ref = use_node_ref();
 
     let message_handle = use_state(|| "".to_string());
+    
+    let response_handle = use_state(|| "".to_string());
+    let response = (*response_handle).clone();
 
     let oninput = {
         let input_node_ref = input_node_ref.clone();
+        let message_handle = message_handle.clone();
 
         Callback::from(move |_| {
-            let input = input_node_ref.cast::<HtmlInputElement>();
-
-            if let Some(input) = input {
+            if let Some(input) = input_node_ref.cast::<HtmlInputElement>() {
                 message_handle.set(input.value());
             }
         })
     };
 
-    let response_handle = use_state(|| "".to_string());
-    let response = (*response_handle).clone();
-
-    let make_sort_request = {
+    let onclick = {
         Callback::from(move |_| {
+            let message_handle = message_handle.clone();
             let response_handle = response_handle.clone();
+
             wasm_bindgen_futures::spawn_local(async move {
-                let response: ResponseBody = Request::post("https://sort.brendandagys.com")
-                    .body("{\"message\": \"4, 3, 11, 153, 7543, 2, 9, 9, 22, 3, 2, 1\"}")
+                let response: Vec<i32> = Request::post(API_ENDPOINT)
+                    .body(format!("{{\"numbers\": \"{}\"}}", (*message_handle).replace("[", "").replace("]", "").replace(" ", "")))
                     .unwrap()
                     .send()
                     .await
@@ -43,7 +40,7 @@ fn app() -> Html {
                     .await
                     .unwrap();
 
-                response_handle.set(response.message);
+                response_handle.set(format!("{:?}", response));
             });
         })
     };
@@ -54,7 +51,7 @@ fn app() -> Html {
                 <h1>{"Merge Sorter"}</h1>
                 <div>
                     <input ref={input_node_ref} oninput={oninput} />
-                    <button onclick={make_sort_request}>{"Send"}</button>
+                    <button {onclick}>{"Send"}</button>
                 </div>
 
                 <small>{"Enter comma-separated numbers to be sorted..."}</small>

@@ -7,7 +7,6 @@ edition = "2021"
 
 [dependencies]
 gloo-net = "0.3.0"
-serde = { version = "1.0.166", features = ["derive"] }
 wasm-bindgen-futures = "0.4.37"
 web-sys = "0.3.64"
 yew = { version = "0.20.0", features = ["csr"] }
