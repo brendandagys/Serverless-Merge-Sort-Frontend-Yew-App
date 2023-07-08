@@ -2,6 +2,7 @@ use gloo_net::http::Request;
 use web_sys::HtmlInputElement;
 use yew::prelude::*;
 
+// const API_ENDPOINT: &str = "http://localhost:3000";
 const API_ENDPOINT: &str = "https://api.sort.brendandagys.com";
 
 #[function_component(App)]
@@ -9,7 +10,7 @@ fn app() -> Html {
     let input_node_ref = use_node_ref();
 
     let message_handle = use_state(|| "".to_string());
-    
+
     let response_handle = use_state(|| "".to_string());
     let response = (*response_handle).clone();
 
@@ -24,24 +25,38 @@ fn app() -> Html {
         })
     };
 
+    let send_api_request = Callback::from(move |_| {
+        let message = (*message_handle).clone();
+        let response_handle = response_handle.clone();
+
+        wasm_bindgen_futures::spawn_local(async move {
+            let response: Vec<i32> = Request::post(API_ENDPOINT)
+                .body(message.replace("[", "").replace("]", "").replace(" ", ""))
+                .unwrap()
+                .send()
+                .await
+                .unwrap()
+                .json()
+                .await
+                .unwrap();
+
+            response_handle.set(format!("{:?}", response));
+        });
+    });
+
+    let onkeydown = {
+        let send_api_request = send_api_request.clone();
+
+        Callback::from(move |e: KeyboardEvent| {
+            if e.key() == "Enter" {
+                send_api_request.emit(());
+            }
+        })
+    };
+
     let onclick = {
         Callback::from(move |_| {
-            let message_handle = message_handle.clone();
-            let response_handle = response_handle.clone();
-
-            wasm_bindgen_futures::spawn_local(async move {
-                let response: Vec<i32> = Request::post(API_ENDPOINT)
-                    .body((*message_handle).replace("[", "").replace("]", "").replace(" ", ""))
-                    .unwrap()
-                    .send()
-                    .await
-                    .unwrap()
-                    .json()
-                    .await
-                    .unwrap();
-
-                response_handle.set(format!("{:?}", response));
-            });
+            send_api_request.emit(());
         })
     };
 
@@ -49,8 +64,9 @@ fn app() -> Html {
         <div>
             <div class="form">
                 <h1>{"Merge Sorter"}</h1>
+                <img src="static/favicon.png" alt="logo" />
                 <div>
-                    <input ref={input_node_ref} oninput={oninput} />
+                    <input ref={input_node_ref} {oninput} {onkeydown} />
                     <button {onclick}>{"Send"}</button>
                 </div>
 

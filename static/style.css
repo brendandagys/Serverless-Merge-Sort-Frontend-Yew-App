@@ -9,10 +9,16 @@
 }
 
 .form > h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+}
+
+.form > img {
+  margin-bottom: 1rem;
+  width: 50px;
 }
 
 input {
+  font-size: 1.6rem;
   margin-right: .5rem;
   max-width: 700px;
   padding-left: 9px;
@@ -63,9 +69,10 @@ small {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: center;
+  margin: 0;
   min-height: 100vh;
 }
