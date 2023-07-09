@@ -61,7 +61,7 @@ fn app() -> Html {
     };
 
     html!(
-        <div>
+        <div class="box">
             <div class="form">
                 <h1>{"Merge Sorter"}</h1>
                 <img src="static/favicon.png" alt="logo" />
