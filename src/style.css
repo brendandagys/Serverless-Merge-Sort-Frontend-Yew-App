@@ -1,32 +1,112 @@
 @keyframes pulse {
-  0% { box-shadow: 0 0 3px 2px rgba(100, 108, 255, .3) }
-  5% { box-shadow: 0 0 3px 2.12px rgba(100, 108, 255, .3) }
-  10% { box-shadow: 0 0 3px 2.25px rgba(100, 108, 255, .4) }
-  15% { box-shadow: 0 0 3.12px 2.37px rgba(100, 108, 255, .4) }
-  20% { box-shadow: 0 0 3.25px 2.5px rgba(100, 108, 255, .5) }
-  25% { box-shadow: 0 0 3.37px 2.67px rgba(100, 108, 255, .5) }
-  30% { box-shadow: 0 0 3.5px 2.75px rgba(100, 108, 255, .6) }
-  35% { box-shadow: 0 0 3.67px 2.87px rgba(100, 108, 255, .6) }
-  40% { box-shadow: 0 0 3.75px 3px rgba(100, 108, 255, .7) }
-  45% { box-shadow: 0 0 3.87px 3.25px rgba(100, 108, 255, .7) }
-  50% { box-shadow: 0 0 4px 3.5px rgba(100, 108, 255, .8) }
-  55% { box-shadow: 0 0 3.87px 3.25px rgba(100, 108, 255, .7) }
-  60% { box-shadow: 0 0 3.75px 3px rgba(100, 108, 255, .7) }
-  65% { box-shadow: 0 0 3.67px 2.87px rgba(100, 108, 255, .6) }
-  70% { box-shadow: 0 0 3.5px 2.75px rgba(100, 108, 255, .6) }
-  75% { box-shadow: 0 0 3.37px 2.67px rgba(100, 108, 255, .5) }
-  80% { box-shadow: 0 0 3.25px 2.5px rgba(100, 108, 255, .5) }
-  85% { box-shadow: 0 0 3.12px 2.37px rgba(100, 108, 255, .4) }
-  90% { box-shadow: 0 0 3px 2.25px rgba(100, 108, 255, .4) }
-  95% { box-shadow: 0 0 3px 2.12px rgba(100, 108, 255, .3) }
-  100% { box-shadow: 0 0 3px 2px rgba(100, 108, 255, .3) }
+  0% { box-shadow: 0 0 3px 2px rgba(100, 108, 255, .3); }
+  1% { box-shadow: 0 0 3px 2.01px rgba(100, 108, 255, .302); }
+  2% { box-shadow: 0 0 3px 2.02px rgba(100, 108, 255, .304); }
+  3% { box-shadow: 0 0 3px 2.03px rgba(100, 108, 255, .306); }
+  4% { box-shadow: 0 0 3px 2.04px rgba(100, 108, 255, .308); }
+  5% { box-shadow: 0 0 3px 2.05px rgba(100, 108, 255, .31); }
+  6% { box-shadow: 0 0 3px 2.06px rgba(100, 108, 255, .312); }
+  7% { box-shadow: 0 0 3px 2.07px rgba(100, 108, 255, .314); }
+  8% { box-shadow: 0 0 3px 2.08px rgba(100, 108, 255, .316); }
+  9% { box-shadow: 0 0 3px 2.09px rgba(100, 108, 255, .318); }
+  10% { box-shadow: 0 0 3px 2.1px rgba(100, 108, 255, .32); }
+  11% { box-shadow: 0 0 3px 2.11px rgba(100, 108, 255, .322); }
+  12% { box-shadow: 0 0 3px 2.12px rgba(100, 108, 255, .324); }
+  13% { box-shadow: 0 0 3px 2.13px rgba(100, 108, 255, .326); }
+  14% { box-shadow: 0 0 3px 2.14px rgba(100, 108, 255, .328); }
+  15% { box-shadow: 0 0 3px 2.15px rgba(100, 108, 255, .33); }
+  16% { box-shadow: 0 0 3px 2.16px rgba(100, 108, 255, .332); }
+  17% { box-shadow: 0 0 3px 2.17px rgba(100, 108, 255, .334); }
+  18% { box-shadow: 0 0 3px 2.18px rgba(100, 108, 255, .336); }
+  19% { box-shadow: 0 0 3px 2.19px rgba(100, 108, 255, .338); }
+  20% { box-shadow: 0 0 3px 2.2px rgba(100, 108, 255, .34); }
+  21% { box-shadow: 0 0 3px 2.21px rgba(100, 108, 255, .342); }
+  22% { box-shadow: 0 0 3px 2.22px rgba(100, 108, 255, .344); }
+  23% { box-shadow: 0 0 3px 2.23px rgba(100, 108, 255, .346); }
+  24% { box-shadow: 0 0 3px 2.24px rgba(100, 108, 255, .348); }
+  25% { box-shadow: 0 0 3px 2.25px rgba(100, 108, 255, .35); }
+  26% { box-shadow: 0 0 3px 2.26px rgba(100, 108, 255, .352); }
+  27% { box-shadow: 0 0 3px 2.27px rgba(100, 108, 255, .354); }
+  28% { box-shadow: 0 0 3px 2.28px rgba(100, 108, 255, .356); }
+  29% { box-shadow: 0 0 3px 2.29px rgba(100, 108, 255, .358); }
+  30% { box-shadow: 0 0 3px 2.3px rgba(100, 108, 255, .36); }
+  31% { box-shadow: 0 0 3px 2.31px rgba(100, 108, 255, .362); }
+  32% { box-shadow: 0 0 3px 2.32px rgba(100, 108, 255, .364); }
+  33% { box-shadow: 0 0 3px 2.33px rgba(100, 108, 255, .366); }
+  34% { box-shadow: 0 0 3px 2.34px rgba(100, 108, 255, .368); }
+  35% { box-shadow: 0 0 3px 2.35px rgba(100, 108, 255, .37); }
+  36% { box-shadow: 0 0 3px 2.36px rgba(100, 108, 255, .372); }
+  37% { box-shadow: 0 0 3px 2.37px rgba(100, 108, 255, .374); }
+  38% { box-shadow: 0 0 3px 2.38px rgba(100, 108, 255, .376); }
+  39% { box-shadow: 0 0 3px 2.39px rgba(100, 108, 255, .378); }
+  40% { box-shadow: 0 0 3px 2.4px rgba(100, 108, 255, .38); }
+  41% { box-shadow: 0 0 3px 2.41px rgba(100, 108, 255, .382); }
+  42% { box-shadow: 0 0 3px 2.42px rgba(100, 108, 255, .384); }
+  43% { box-shadow: 0 0 3px 2.43px rgba(100, 108, 255, .386); }
+  44% { box-shadow: 0 0 3px 2.44px rgba(100, 108, 255, .388); }
+  45% { box-shadow: 0 0 3px 2.45px rgba(100, 108, 255, .39); }
+  46% { box-shadow: 0 0 3px 2.46px rgba(100, 108, 255, .392); }
+  47% { box-shadow: 0 0 3px 2.47px rgba(100, 108, 255, .394); }
+  48% { box-shadow: 0 0 3px 2.48px rgba(100, 108, 255, .396); }
+  49% { box-shadow: 0 0 3px 2.49px rgba(100, 108, 255, .398); }
+  50% { box-shadow: 0 0 3px 2.5px rgba(100, 108, 255, .4); }
+  51% { box-shadow: 0 0 3px 2.49px rgba(100, 108, 255, .398); }
+  52% { box-shadow: 0 0 3px 2.48px rgba(100, 108, 255, .396); }
+  53% { box-shadow: 0 0 3px 2.47px rgba(100, 108, 255, .394); }
+  54% { box-shadow: 0 0 3px 2.46px rgba(100, 108, 255, .392); }
+  55% { box-shadow: 0 0 3px 2.45px rgba(100, 108, 255, .39); }
+  56% { box-shadow: 0 0 3px 2.44px rgba(100, 108, 255, .388); }
+  57% { box-shadow: 0 0 3px 2.43px rgba(100, 108, 255, .386); }
+  58% { box-shadow: 0 0 3px 2.42px rgba(100, 108, 255, .384); }
+  59% { box-shadow: 0 0 3px 2.41px rgba(100, 108, 255, .382); }
+  60% { box-shadow: 0 0 3px 2.4px rgba(100, 108, 255, .38); }
+  61% { box-shadow: 0 0 3px 2.39px rgba(100, 108, 255, .378); }
+  62% { box-shadow: 0 0 3px 2.38px rgba(100, 108, 255, .376); }
+  63% { box-shadow: 0 0 3px 2.37px rgba(100, 108, 255, .374); }
+  64% { box-shadow: 0 0 3px 2.36px rgba(100, 108, 255, .372); }
+  65% { box-shadow: 0 0 3px 2.35px rgba(100, 108, 255, .37); }
+  66% { box-shadow: 0 0 3px 2.34px rgba(100, 108, 255, .368); }
+  67% { box-shadow: 0 0 3px 2.33px rgba(100, 108, 255, .366); }
+  68% { box-shadow: 0 0 3px 2.32px rgba(100, 108, 255, .364); }
+  69% { box-shadow: 0 0 3px 2.31px rgba(100, 108, 255, .362); }
+  70% { box-shadow: 0 0 3px 2.3px rgba(100, 108, 255, .36); }
+  71% { box-shadow: 0 0 3px 2.29px rgba(100, 108, 255, .358); }
+  72% { box-shadow: 0 0 3px 2.28px rgba(100, 108, 255, .356); }
+  73% { box-shadow: 0 0 3px 2.27px rgba(100, 108, 255, .354); }
+  74% { box-shadow: 0 0 3px 2.26px rgba(100, 108, 255, .352); }
+  75% { box-shadow: 0 0 3px 2.25px rgba(100, 108, 255, .35); }
+  76% { box-shadow: 0 0 3px 2.24px rgba(100, 108, 255, .348); }
+  77% { box-shadow: 0 0 3px 2.23px rgba(100, 108, 255, .346); }
+  78% { box-shadow: 0 0 3px 2.22px rgba(100, 108, 255, .344); }
+  79% { box-shadow: 0 0 3px 2.21px rgba(100, 108, 255, .342); }
+  80% { box-shadow: 0 0 3px 2.2px rgba(100, 108, 255, .34); }
+  81% { box-shadow: 0 0 3px 2.19px rgba(100, 108, 255, .338); }
+  82% { box-shadow: 0 0 3px 2.18px rgba(100, 108, 255, .336); }
+  83% { box-shadow: 0 0 3px 2.17px rgba(100, 108, 255, .334); }
+  84% { box-shadow: 0 0 3px 2.16px rgba(100, 108, 255, .332); }
+  85% { box-shadow: 0 0 3px 2.15px rgba(100, 108, 255, .33); }
+  86% { box-shadow: 0 0 3px 2.14px rgba(100, 108, 255, .328); }
+  87% { box-shadow: 0 0 3px 2.13px rgba(100, 108, 255, .326); }
+  88% { box-shadow: 0 0 3px 2.12px rgba(100, 108, 255, .324); }
+  89% { box-shadow: 0 0 3px 2.11px rgba(100, 108, 255, .322); }
+  90% { box-shadow: 0 0 3px 2.1px rgba(100, 108, 255, .32); }
+  91% { box-shadow: 0 0 3px 2.09px rgba(100, 108, 255, .318); }
+  92% { box-shadow: 0 0 3px 2.08px rgba(100, 108, 255, .316); }
+  93% { box-shadow: 0 0 3px 2.07px rgba(100, 108, 255, .314); }
+  94% { box-shadow: 0 0 3px 2.06px rgba(100, 108, 255, .312); }
+  95% { box-shadow: 0 0 3px 2.05px rgba(100, 108, 255, .31); }
+  96% { box-shadow: 0 0 3px 2.04px rgba(100, 108, 255, .308); }
+  97% { box-shadow: 0 0 3px 2.03px rgba(100, 108, 255, .306); }
+  98% { box-shadow: 0 0 3px 2.02px rgba(100, 108, 255, .304); }
+  99% { box-shadow: 0 0 3px 2.01px rgba(100, 108, 255, .302); }
+  100% { box-shadow: 0 0 3px 2px rgba(100, 108, 255, .3); }  
 }
 
 .box {
   background: #2e2e2e;
   border-radius: 15px;
   padding: .5rem 1rem;
-  animation: pulse 4s ease-in-out infinite;
+  animation: pulse 3s ease-in-out infinite;
 }
 
 .form {
@@ -64,6 +144,7 @@ button {
   background-color: #1a1a1a;
   border-radius: 8px;
   border: 1px solid transparent;
+  color: white;
   cursor: pointer;
   font-family: inherit;
   font-size: 1rem;
