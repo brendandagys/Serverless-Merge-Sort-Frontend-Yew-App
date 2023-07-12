@@ -3,7 +3,7 @@ use web_sys::HtmlInputElement;
 use yew::prelude::*;
 
 // const API_ENDPOINT: &str = "http://localhost:3000";
-const API_ENDPOINT: &str = "https://api.sort.brendandagys.com";
+const API_ENDPOINT: &str = "https://api.mergesort.brendandagys.com";
 
 #[function_component(App)]
 fn app() -> Html {
